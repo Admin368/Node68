@@ -1,1 +1,1 @@
-browser-sync start --server --files "index.html. style.css"
+browser-sync start --server --files "index.html"
