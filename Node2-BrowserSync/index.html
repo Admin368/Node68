@@ -9,11 +9,12 @@
     <link href='https://css.gg/timer.css' rel='stylesheet'>
     <title>Node2</title>
     <script src="https://kit.fontawesome.com/79db79c7b1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="icons/codepen-brands.svg">
 </head>
 <body>
     <div id="wrapper">
         <div id="topbar">
-            <div id="title"> <p>SITE</p></div>
+            <div id="title"> <a>SITE</a></div>
             <div id="navigation">
                 <a href="">HOME</a>
                 <a href="">ACCOUNT</a>
@@ -47,44 +48,67 @@
             </div>
             <div id="content"><p></p></div>
         </div>
-        <div id="footer"></div>
+        <div id="footer"><a href="">MARAVIAN©2020</a></div>
     </div>
 </body>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+:root{
+    --color-basic: #616161;
+    --font-main: 'Roboto', sans-serif;
+}
+*{
+    font-family: var(--font-main);
+}
 #wrapper{
-width: 1366px;
-height: 768px;
+width: 100vw;
+height: 100vh;
+margin: 0px;
+padding: 0px;
+/* position: relative; */
+overflow: hidden;
 /* border: 1px solid black; */
 /* overflow: hidden; */
 }
 #topbar{
 width: 100%;
-height: 20%;
+/* height: 40%; */
 /* border: 1px solid blue; */
-display: flex;
-flex-wrap: wrap;
+/* display: flex;
+flex-wrap: wrap; */
 border-bottom: 2px solid rgba(0, 0, 0, 0.336);
 /* overflow: hidden; */
+
 }
 #title{
-width:49%;
-height:100%;
+width:100%;
+height:70px;
 text-align: center;
 font-size: 50px;
+margin: 0px;
+padding: 0px;
+/* position: relative; */
+font-size: 70px;
 font-family: 'Roboto', sans-serif;
+
 /* border-right: 1px solid black;     */
 }
 #navigation{
-width:50%;
+top:0%;
+left:0%;
+width:100%;
 height:100%;
 overflow:hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+/* position: relative; */
 /* align-items: center; */
 /* border: 1px solid red; */
 }
 #navigation a {
 text-align: center;
-background-color: rgba(0, 0, 0, 0.336);
+background-color: var(--color-basic);
 color: white;
 padding: 14px 16px;
 text-decoration:none;
@@ -102,16 +126,16 @@ flex-wrap: wrap;
 position:absolute;
 z-index:0;
 width:  60px;
-height: 100%;
+height: 550px;
 /* border: 1px solid red; */
 transition: 1s;
 overflow: hidden;
 /* color: #616161; */
-background-color: #616161;
+background-color: var(--color-basic);
 /* overflow: hidden; */
 }
 #sidebar:hover{
-    width:130px;
+    width:135px;
     /* color:white; */
 }
 #sidebar:hover #options{
@@ -217,8 +241,13 @@ height: 100%;
 #footer{
 width: 100%;
 height: 10%;
+text-align: center;
+font-size: 40px;
 /* border: 1px solid yellow; */
 /* overflow: hidden; */
+}
+#footer a{
+text-decoration: none;
 }
 #clear{
 clear: both;
@@ -228,7 +257,7 @@ clear: both;
     // alert("hello");
     $(document).ready(function(){
      $("#sidebar").mouseover(function(){
-         $("#icon").css("background-color", "red");
+         $("#icon").css("background-color", "blue");
      });
 });
 </script>
